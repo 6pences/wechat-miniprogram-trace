@@ -17,10 +17,20 @@ Page({
       devicePlatform: '',
       password: '',
       username: ''
+    },
+    error: {
+      username: false,
+      password: false
     }
   },
 
+  toPravicy: function() {
+    wx.navigateTo({ url: '../instruction/instruction?flag=privacy' })
+  },
+
   register: function (e) {
+    this.setData({ 'error.username': !e.detail.value.username, 'error.password': !e.detail.value.password });
+    if (this.data.error.username || this.data.error.password) return;
     this.setData({ // 设置注册基本信息
       'registerForm.appPackage': app.globalData.basicInfo.appPackage,
       'registerForm.appVersion': app.globalData.basicInfo.appVersion,
