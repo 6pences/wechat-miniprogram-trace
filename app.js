@@ -14,22 +14,30 @@ App({
     wx.setStorageSync('logs', logs)
 
     // 获取当前版本信息
-    wx.getSystemInfo({ success: res => { this.globalData.appInfo = res } })
+    wx.getSystemInfo({ success: res => {
+      wx.setStorage({
+        data: res,
+        key: 'appInfo',
+      })
+      this.globalData.appInfo = res
+    } })
 
     // 登录
     wx.login({
       success: res => {
-        // console.log(res)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        // http.askFor(api.user.code2Session, {
-        //   appid: this.globalData.accountInfo.appid,
-        //   secret: this.globalData.accountInfo.secret,
-        //   jsCode: res.code
-        // }, res => {
-        //   console.log(res)
-        // })
+        http.askFor(api.user.code2Session,{
+          appid: this.globalData.accountInfo.appid,
+          secret: this.globalData.accountInfo.terces.split('').reverse().join(''),
+          jsCode: res.code}).then(res => {
+          wx.setStorage({
+            data: res.data.map,
+            key: 'users',
+          })
+        })
       }
     })
+    
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -53,22 +61,29 @@ App({
   },
   globalData: {
     accountInfo: { // 小程序信息
-      appid: 'wx6c55f1fc0850674e',
-      secret: 'c627d4f952f20c07921bbe31a4ee9e48'
+      appid: 'wxf5d185ee6c266044',
+      terces: '0acd47d4196bf387dc33b832f633a63a'
     },
     basicInfo: { // 基本配置
-      appPackage: 'wx.hc.friendtrack',
-      appVersion: '1.0.0',
+      appName: '小雷达手机定位',
+      appPackage: 'wx.ecart.friendtrack',
+      appVersion: '2',
+      appVersionName: '',
       agencyChannel: 'miniProgram',
       appMarket: 'miniProgram',
       application: 'sjdw'
     },
     mapLocation: {}, // 位置信息
     appInfo: {}, // 应用信息
+    secret: {
+      qqmap: 'KZFBZ-7MI6S-HZ7OT-6OBDS-Z4N5Z-4RBNL',
+      bmap: 'rrMuufEL4IjQnkC9XpylM9iA3ul1wlHq'
+    },
     wxUserInfo: null // 微信登录用户数据
+
   },
-  qqmapsdk: new QQMapWX({ key: 'ENQBZ-IJKKD-ACI4X-H5PXE-RUVZ5-75BVJ'}),
-  BMap: new bMap.BMapWX({ ak: 'uGLScSa3TZjBqzGY5Zy1GuFFAtBy2N0I' }),
+  qqmapsdk: new QQMapWX({ key: 'KZFBZ-7MI6S-HZ7OT-6OBDS-Z4N5Z-4RBNL'}),
+  BMap: new bMap.BMapWX({ ak: 'rrMuufEL4IjQnkC9XpylM9iA3ul1wlHq' }),
   http: http,
   api: api
 })
