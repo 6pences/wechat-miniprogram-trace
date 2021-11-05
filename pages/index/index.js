@@ -16,6 +16,7 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
@@ -23,27 +24,25 @@ Page({
     })
   },
 
-  toPage: function (e) {
+  toPage: function(e) {
     let path = e.currentTarget.dataset.path
     wx.navigateTo({ url: `../../pages/${path}/${path}` })
   },
 
-  onShow: function () {
-    wx.getStorage({
-      key: 'userInfo',
-    }).then(info => {
+  onShow: function() {
+    wx.getStorage({ key: 'userInfo' }).then(info => {
       let userInfo = info.data
       this.setData({ 'userInfo.name': userInfo.username })
-    })
+    }).catch(error => {})
   },
 
-  onLoad: function () {
+  onLoad: function() {
     if (app.globalData.wxUserInfo) {
       this.setData({
         userInfo: app.globalData.wxUserInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse){
+    } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
@@ -56,25 +55,21 @@ Page({
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
         success: res => {
-          console.log(res)
           app.globalData.wxUserInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
+          this.setData({ userInfo: res.userInfo, hasUserInfo: true })
         }
       })
     }
   },
 
-  getPhoneNumber (e) {
+  getPhoneNumber(e) {
     console.log(e.detail.errMsg)
     console.log(e.detail.iv)
     console.log(e.detail.encryptedData)
   },
 
   // 退出登录
-  logout: function () {
+  logout: function() {
     wx.getStorage({
       key: 'userInfo',
     }).then(info => {
@@ -93,6 +88,8 @@ Page({
       hasUserInfo: true
     })
   },
-  getPhoneNumber: function (e) {
+  getPhoneNumber: function(e) {},
+  toAgreement: function() {
+    wx.navigateTo({ url: `../agreement/agreement` })
   }
 })

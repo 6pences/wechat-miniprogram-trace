@@ -88,5 +88,28 @@ module.exports = {
       path: '/location/queryFriendLocationRecord',
       method: 'GET'
     }
+  },
+  goods:{
+    path: '/product/queryProduct',
+    method: 'GET'
+  },
+  // 支付
+  payfor:{
+    createPay:{
+      path: '/order/createOrder',
+      method: 'post'
+    }
+  },
+  // 登陆传给后台位置信息
+  findConfigAddress:{
+    path: '/config/findConfigAddress',
+    method: 'post',
+    tokenFree: true
+  },
+  // 获取地址是否收费
+  findConfigColumn:{
+    path: '/config/findConfigColumn',
+    method: 'post',
+    tokenFree: true
   }
 }

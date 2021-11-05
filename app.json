@@ -13,12 +13,16 @@
     "pages/message/message",
     "pages/weather/weather",
     "pages/direction/direction",
-    "pages/virus/virus"
+    "pages/virus/virus",
+    "pages/goods/goods",
+    "pages/agreement/agreement",
+    "pages/BMI",
+    "pages/BMI/BMI"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "好友追踪",
+    "navigationBarTitleText": "我的位置",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
@@ -67,15 +71,15 @@
   },
   "plugins": {
     "chooseLocation": {
-      "version": "1.0.4",
+      "version": "1.0.5",
       "provider": "wx76a9a06e5b4e693e"
     },
     "routePlan": {
-      "version": "1.0.7",
+      "version": "1.0.12",
       "provider": "wx50b5593e81dd937a"
     },
     "subway": {
-      "version": "1.0.9",
+      "version": "1.0.10",
       "provider": "wx6aaf93c4435fa1c1"
     }
   },

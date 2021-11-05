@@ -12,7 +12,7 @@ Page({
             return;
         }
         var BMap = new bmap.BMapWX({
-            ak: 'uGLScSa3TZjBqzGY5Zy1GuFFAtBy2N0I'
+            ak: 'rkhRYeYjx1p63y2ZDFRK43sGyoiYbNmm'
         });
         var fail = function(data) {
             console.log(data)

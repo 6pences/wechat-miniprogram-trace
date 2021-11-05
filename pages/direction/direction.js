@@ -119,8 +119,8 @@ Page({
    */
   onShow: function () {
     // this.direction(app.globalData.mapLocation)
-    let plugin = requirePlugin('routePlan');
-    let key = 'ENQBZ-IJKKD-ACI4X-H5PXE-RUVZ5-75BVJ';  //使用在腾讯位置服务申请的key
+    // let plugin = requirePlugin('routePlan');
+    let key = app.globalData.secret.qqmap;  //使用在腾讯位置服务申请的key
     let referer = 'wx76a9a06e5b4e693e';   //调用插件的app的名称
     let endPoint = JSON.stringify({  //终点
         'name': '深圳',
