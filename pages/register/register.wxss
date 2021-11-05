@@ -1,2 +1,9 @@
 /* pages/register/register.wxss */
-@import '../login/login.wxss'
+@import '../login/login.wxss';
+.login-form {
+  width: 18rem;
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.13);
+}
