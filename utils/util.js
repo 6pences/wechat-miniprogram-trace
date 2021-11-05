@@ -27,27 +27,25 @@ const getLocation = (cb) => {
         location: {
           latitude: location.latitude,
           longitude: location.longitude
-        },
-        success: (res) => {
-          console.log(res)
+        }, success: (res) => {
           if (typeof cb === 'function') cb(res)
           let addParam = {
             address: res.result.address,
             lat: location.latitude + '',
             lon: location.longitude + ''
           }
-          if (res.message == 'query ok') $http.askFor($api.location.add, addParam).then((data) => {})
-        },
-        fail: (res) => {}
+          let userInfo = wx.getStorageSync('user');
+          if (res.message == 'query ok' && userInfo) $http.askFor($api.location.add, addParam).then((data) => {}) // 用户登录则上传位置信息
+        }, fail: (res) => {}
       });
     }, complete: () => {}
   })
 }
 
 const getCurrentPage = () => {
-  let pages = getCurrentPages();    //获取加载的页面
-  let currentPage = pages[pages.length - 1];  //获取当前页面的对象
-  let url = currentPage.route;  //当前页面url
+  let pages = getCurrentPages(); //获取加载的页面
+  let currentPage = pages[pages.length - 1]; //获取当前页面的对象
+  let url = currentPage.route; //当前页面url
   return url
 }
 

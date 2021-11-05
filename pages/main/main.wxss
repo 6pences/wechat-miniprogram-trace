@@ -46,16 +46,16 @@
   padding: 8px;
 }
 .app-view {
-  background: #EDF1F9;
-  border-radius: 9px;
-  border-radius: 9px;
-  padding: 8px;
+  background: #fff;
+  box-shadow: 0px 2px 6px lightgray;
+  border-radius: 18px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   margin: 0 0 10px 0;
-  padding: 10px;
+  padding: 18px 20px;
+  font-weight: 600;
 }
 
 .panel .panel-content {
@@ -78,11 +78,11 @@
 
 .app-view .app-view-title {
   font-family: PingFangSC-Semibold;
-  font-size: 22px;
+  font-size: 16px;
   color: #1A3B34;
   letter-spacing: 0;
-  width: calc(50% - 1.4rem);
   text-align: center;
+  margin: 0 20px;
 }
 
 .panel .panel-content {
@@ -92,8 +92,8 @@
 }
 
 .app-view .app-view-icon {
-  height: 2.8rem;
-  width: 2.8rem;
+  height: 1.2rem;
+  width: 1.2rem;
 }
 
 .app-view .app-view-content {
@@ -108,5 +108,7 @@
   color: #77807D;
   letter-spacing: 0;
   width: calc(50% - 1.4rem);
-  text-align: center;
+  text-align: right;
+  align-self: flex-end;
+  flex: 1;
 }

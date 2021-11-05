@@ -11,23 +11,9 @@
   <view class="user-center">
     <image src="{{userInfo.image}}"></image>
     <view>
-      <view class="info-cell">
-        <text slot="title">姓名</text>
-        <text>{{userInfo.name}}</text>
-      </view>
-      <!-- <view class="info-cell">
-        <text slot="title">性别</text>
-        <text>{{userInfo.sex}}</text>
-      </view>
-      <view class="info-cell">
-        <text slot="title">年龄</text>
-        <text>{{userInfo.age}}</text>
-      </view> -->
+      <text>{{userInfo.name}}</text>
     </view>
   </view>
-  <!-- <text data-path="regeocoding" bindtap="toPage"> regeocoding </text>
-  <text data-path="geocoding" bindtap="toPage"> geocoding </text>
-  <text data-path="search" bindtap="toPage"> search </text>
-  <text data-path="suggestion" bindtap="toPage"> suggestion </text> -->
-  <button class="login-out" type="warn" plain bindtap="logout"> 退出登录 </button>
+  <van-button class="logout-btn" size="large" bindtap="logout" form-type="submit" type="danger" plain wx:if="{{userInfo.name}}"> 退出登录 </van-button>
+  <van-button class="logout-btn" size="large" bindtap="toPage" data-path="login" type="primary" plain wx:else> 去登录 </van-button>
 </view>
