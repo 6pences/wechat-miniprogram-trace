@@ -5,7 +5,7 @@
   align-items: center;
   height: 100%;
   justify-content: flex-start;
-  background-color: #28E997;
+  background-color: #95d6d0;
   padding: 40px;
 }
 .login-img {
@@ -39,7 +39,7 @@
 button {
   margin: 1rem 0 0 0;
 }
-.login .van-button--square  {
+.login .button--square  {
   border-radius: 6px;
   background: #28E997;
   border: none;
@@ -48,6 +48,9 @@ button {
   background-color: transparent;
   border-bottom: 1px solid rgba(237,241,249, 0.2);
   padding-left: 0;
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px;
 }
 .login .van-checkbox {
   margin: 10px 0 0 0;
@@ -61,7 +64,7 @@ button {
   border-radius: 6px;
   z-index: 1;
 }
-.login .van-button--plain {
+.login .button--plain {
   background-color: transparent;
   color: #28E997;
   border: 1px solid #28E997;

@@ -2,10 +2,8 @@
 <view class="page login">
   <image class="login-title-image" src="../../images/register.png" />
   <form class="login-form" bindsubmit="register">
-    <van-cell-group>
-      <van-field size="large" name="username" type="number" value="{{ registerForm.username }}" placeholder="请输入你的手机号码" border="{{ false }}" error="{{error.username}}"/>
-      <van-field size="large" name="password" password value="{{ registerForm.password }}" placeholder="请输入密码" border="{{ false }}" error="{{error.password}}" />
-    </van-cell-group>
-    <van-button size="large" square form-type="submit" type="primary"> 注册 </van-button>
+      <input class="van-cell" name="username" type="number" value="{{ registerForm.username }}" placeholder="请输入你的手机号码" border="{{ false }}" error="{{error.username}}"/>
+      <input class="van-cell" name="password" password value="{{ registerForm.password }}" placeholder="请输入密码" border="{{ false }}" error="{{error.password}}" />
+    <button size="large" square form-type="submit" type="primary"> 注册 </button>
   </form>
 </view>

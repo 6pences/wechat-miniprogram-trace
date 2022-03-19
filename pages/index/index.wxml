@@ -15,6 +15,6 @@
       <text>{{userInfo.name}}</text>
     </view>
   </view>
-  <van-button class="logout-btn" size="large" bindtap="logout" form-type="submit" type="danger" wx:if="{{userInfo.name}}"> 退出登录 </van-button>
-  <van-button style="width: 100%;" size="large" bindtap="toPage" data-path="login" type="primary" plain wx:else> 去登录 </van-button>
+  <button class="logout-btn" size="large" bindtap="logout" form-type="submit" type="danger" wx:if="{{userInfo.name}}"> 退出登录 </button>
+  <button style="width: 100%;" size="large" bindtap="toPage" data-path="login" type="primary" plain wx:else> 去登录 </button>
 </view>
