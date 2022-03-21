@@ -61,12 +61,12 @@ App({
   },
   globalData: {
     accountInfo: { // 小程序信息
-      appid: 'wx6b22296ca5b55ecf',
-      terces: '2edcd493202d62dd477063feaa948c8f' 
+      appid: 'wx70ed698e0f67b2fd',
+      terces: 'dfd0233c26edc4b5bf93db8a0106fa1e'
     },
     basicInfo: { // 基本配置
       appName: '北斗智寻',
-      appPackage: 'wx.seventh.friendtrack',
+      appPackage: 'wx.eighth.friendtrack',
       appVersion: '2',
       appVersionName: '',
       agencyChannel: 'miniProgram',
@@ -76,13 +76,13 @@ App({
     mapLocation: {}, // 位置信息
     appInfo: {}, // 应用信息
     secret: {
-      qqmap: 'LLDBZ-L5UCW-7XXRT-RCDRS-WRADH-3MB7O',
-      bmap: 'cAfORoHwgM47eQmO5qpY3mpUMDO57diX'
+      qqmap: 'IRLBZ-JDP6X-ANQ4B-7D3SE-TFUYO-UHFJM',
+      bmap: '8DgGT0enZXNubeW2asHRXAO8EfXLyt0Z'
     },
     wxUserInfo: null // 微信登录用户数据
   },
-  qqmapsdk: new QQMapWX({ key: 'LLDBZ-L5UCW-7XXRT-RCDRS-WRADH-3MB7O'}),
-  BMap: new bMap.BMapWX({ ak: 'cAfORoHwgM47eQmO5qpY3mpUMDO57diX' }),
+  qqmapsdk: new QQMapWX({ key: 'IRLBZ-JDP6X-ANQ4B-7D3SE-TFUYO-UHFJM'}),
+  BMap: new bMap.BMapWX({ ak: '8DgGT0enZXNubeW2asHRXAO8EfXLyt0Z' }),
   http: http,
   api: api
 })
