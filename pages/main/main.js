@@ -51,7 +51,8 @@ Page({
         bindtap: 'toBMI'
       }
     ],
-    isShowFriendPanel: false
+    isShowFriendPanel: false,
+    QRcode: '',
   },
   //点击按钮弹出指定的hiddenmodalput弹出框  
   modalinput: function() {
@@ -257,8 +258,9 @@ Page({
     let isCharge = addressIsCharge && columnIsCharge;
     let appInfo = wx.getStorageSync('appInfo');
     let isIOS = appInfo.system.toLowerCase().indexOf('ios') > -1;
-    this.setData({ isShowFriendPanel: isCharge && !isIOS });
-  },
+    // this.setData({ isShowFriendPanel: isCharge && !isIOS });
+    if (isCharge && !isIOS) wx.previewImage({ current: '', urls: [this.data.QRCode] })
+},
 
   getOpenId: function() {
     let openId = wx.getStorageSync('users')
@@ -388,6 +390,7 @@ Page({
       appVersion: app.globalData.basicInfo.appVersion,
       application: app.globalData.basicInfo.application
     }).then(res => {
+        this.setData({ QRCode: res.data.configMap.QRcode || '' })
       return parseInt(res.data.configMap.isCharge)
     })
   },
