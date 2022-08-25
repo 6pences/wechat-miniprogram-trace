@@ -1,3 +1,4 @@
+<!--pages/weather/weather.wxml-->
 <view class="weather">
   <text>{{weatherData}}</text>
 </view>

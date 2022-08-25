@@ -7,10 +7,11 @@ Page({
         var that = this; 
         // 新建百度地图对象 
         var BMap = new bmap.BMapWX({ 
-            ak: 'rrMuufEL4IjQnkC9XpylM9iA3ul1wlHq' 
+            ak: 't8W5177cNE3fbGg63gBO7NjGnARtN7NV' 
         }); 
+        console.log(BMap)
         var fail = function(data) { 
-            console.log(data) 
+            console.log('on load weather failed', data);
         }; 
         var success = function(data) { 
             var weatherData = data.currentWeather[0]; 

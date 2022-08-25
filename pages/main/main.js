@@ -25,25 +25,29 @@ Page({
     },
     requestNumber: 0, // 好友请求数量
     friendList: [], // 定位好友列表
-    applicationList: [{
-        id: 'subway',
-        title: '地铁',
-        icon: '../../images/subway.png',
-        content: '',
-        bindtap: 'toSubway'
-      }, {
+    applicationList: [
+        // {
+        //     id: 'subway',
+        //     title: '地铁',
+        //     icon: '../../images/subway.png',
+        //     content: '',
+        //     bindtap: 'toSubway'
+        // },
+    {
         id: 'map',
         title: '地图',
         icon: '../../images/map-tool.png',
         content: '',
         bindtap: 'toMap'
-      }, {
-        id: 'route',
-        title: '路线',
-        icon: '../../images/route.png',
-        content: '',
-        bindtap: 'toDirection'
-      }, {
+      },
+    //   {
+    //     id: 'route',
+    //     title: '路线',
+    //     icon: '../../images/route.png',
+    //     content: '',
+    //     bindtap: 'toDirection'
+    //   },
+      {
         id: 'BMI',
         title: 'BMI',
         icon: '../../images/BMI.png',
@@ -95,6 +99,11 @@ Page({
     wx.navigateTo({
       url: 'plugin://subway/index?key=' + key + '&referer=' + referer
     });
+  },
+
+  // 查看天气
+  toWeather: function() {
+    wx.navigateTo({ url: '../weather/weather' })
   },
 
   // 查看疫情动态
