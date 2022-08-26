@@ -370,6 +370,7 @@ Page({
           address: mks[0].title,
           city: res.address_component.province + res.address_component.city
         })
+        this.isShowPanel();
       },
       fail: (res) => {}
     })
@@ -403,7 +404,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    this.isShowPanel();
     util.getLocation(res => {
       this.regeocoding(app.globalData.mapLocation)
       let list = this.data.applicationList
