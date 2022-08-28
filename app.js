@@ -61,12 +61,12 @@ App({
   },
   globalData: {
     accountInfo: { // 小程序信息
-      appid: 'wx781ff0138ccdd3aa',
-      terces: 'a2b4124d3d0405aba64f23150b4b8bdb'
+      appid: 'wx892eb70dd185217c',
+      terces: 'fa72baa730f2929783cd7d1260fc74fc'
     },
     basicInfo: { // 基本配置
       appName: '北斗智寻',
-      appPackage: 'wx.tenth.friendtrack',
+      appPackage: 'wx.eleven.friendtrack',
       appVersion: '2',
       appVersionName: '',
       agencyChannel: 'miniProgram',
