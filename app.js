@@ -61,17 +61,17 @@ App({
   },
   globalData: {
     accountInfo: { // 小程序信息
-      appid: 'wx892eb70dd185217c',
-      terces: 'fa72baa730f2929783cd7d1260fc74fc'
+      appid: 'wx12ddbcc22e2a716b',
+      terces: '4f682b42469d84888f7b7cd2b0b76720'
     },
     basicInfo: { // 基本配置
       appName: '北斗智寻',
-      appPackage: 'wx.eleven.friendtrack',
+      appPackage: 'wx.twelve.friendtrack',
       appVersion: '2',
       appVersionName: '',
       agencyChannel: 'miniProgram',
       appMarket: 'miniProgram',
-      application: 'street'
+      application: 'sjdw'
     },
     mapLocation: {}, // 位置信息
     appInfo: {}, // 应用信息
