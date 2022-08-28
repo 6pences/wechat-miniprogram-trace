@@ -71,7 +71,7 @@ App({
       appVersionName: '',
       agencyChannel: 'miniProgram',
       appMarket: 'miniProgram',
-      application: 'street'
+      application: 'sjdw'
     },
     mapLocation: {}, // 位置信息
     appInfo: {}, // 应用信息
