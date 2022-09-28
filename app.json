@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/instruction/instruction",
     "pages/main/main",
     "pages/register/register",
     "pages/message/message",
@@ -7,11 +8,9 @@
     "pages/login/login",
     "pages/map/map",
     "pages/BMI/BMI",
-    "pages/instruction/instruction",
     "pages/location/location",
     "pages/record/record",
     "pages/friends/friends",
-    "pages/direction/direction",
     "pages/weather/weather",
     "pages/QR/QR"
   ],
