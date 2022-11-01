@@ -5,15 +5,15 @@
   "directories": {
     "lib": "lib"
   },
-  "dependencies": {
-    "@vant/weapp": "^1.6.8"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git@Personal:6pences/wechat-miniprogram-trace.git"
+  }
 }

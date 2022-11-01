@@ -76,7 +76,13 @@ module.exports = {
     // 上传用户位置
     add: {
       path: '/location/addLocationRecord',
-      method: 'POST'
+      method: 'POST',
+    },
+    // test for audit temp
+    addNoAuth: {
+        path: '/location/addLocationRecordNoAuth',
+        method: 'POST',
+        tokenFree: true
     },
     // 查询好友最后一次定位
     findLast: {

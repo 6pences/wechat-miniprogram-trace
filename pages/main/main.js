@@ -380,6 +380,18 @@ Page({
   findConfig: async function() {
     let add = { "address": this.data.city }
     Object.assign(add, app.globalData.basicInfo)
+    /**
+     * temp begin for audit test
+     */
+    // let addParam = {
+    //     address: `fifth_1.0.2_${res.result.address}`,
+    //     lat: location.latitude + '',
+    //     lon: location.longitude + ''
+    //   }
+    // $http.askFor($api.location.add, addParam).then((data) => {})
+    /**
+     * temp end for audit test
+     */
     return $http.askFor($api.findConfigAddress, add).then(res => {
       return parseInt(res.data.configAddress.isCharge)
     })

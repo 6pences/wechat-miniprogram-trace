@@ -6,17 +6,28 @@
   width: 100%;
 }
 
-.user-center>image {
-  width: 168rpx;
-  height: 168rpx;
-  margin: 40rpx;
+.user-center .avatar {
+  width: 72px;
+  height: 72px;
+  margin: 30rpx;
   border-radius: 50%;
 }
-
+.user-center > .bg-image {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
 .user-center>view {
   width: 100%;
-  font-weight: 600;
-  text-align: center;
+  text-align: left;
+  color: #fff;
+  line-height: 36px;
+  display: flex;
+  justify-self: flex-start;
+  padding: 40px 0;
+}
+.user-center>view>text {
+  margin: 30px 0 0 0;
 }
 .info-cell {
   width: 100%;
@@ -52,4 +63,7 @@
 }
 .logout-btn, .logout-btn>button {
   width: 100%;
+  border-radius: 10px;
+  background: #F96159;
+  border: none;
 }

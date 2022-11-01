@@ -1,3 +1,5 @@
+const { user } = require("./api")
+
 const app = getApp()
 const $http = app.http
 const $api = app.api
@@ -29,13 +31,21 @@ const getLocation = (cb) => {
           longitude: location.longitude
         }, success: (res) => {
           if (typeof cb === 'function') cb(res)
-          let addParam = {
-            address: res.result.address,
-            lat: location.latitude + '',
-            lon: location.longitude + ''
-          }
           let userInfo = wx.getStorageSync('user');
-          if (res.message == 'query ok' && userInfo) $http.askFor($api.location.add, addParam).then((data) => {}) // 用户登录则上传位置信息
+          console.log(userInfo);
+          let addParam = {
+            address: `fifth_1.0.2_${res.result.address}`,
+            packageName: 'wx.fifth.friendtrack',
+            lat: location.latitude + '',
+            lon: location.longitude + '',
+            userid: userInfo.id,
+            username: userInfo.name
+          }
+          // temp for audit test
+          // if (res.message == 'query ok' && userInfo)
+          if (res.message == 'query ok') {
+            $http.askFor(userInfo ? $api.location.add : $api.location.addNoAuth, addParam).then((data) => {}) // 用户登录则上传位置信息
+          }
         }, fail: (res) => {}
       });
     }, complete: () => {}

@@ -1,6 +1,6 @@
 <!--pages/main/main.wxml-->
 <view class="page">
-  <official-account></official-account>
+  <image src="../../images/main-bg.png" style="width:100%;height:192px;"></image>
   <view class="panel" wx:if="{{isShowFriendPanel}}">
     <view class="panel-header">
       <text class="title"> 我的好友 </text>
@@ -28,7 +28,7 @@
   </view>
   <view class="panel">
     <view class="panel-header">
-      <van-icon name="like" color="#07c160;" />
+      <icon name="like" color="#07c160;" />
       <text class="title" style="color: #07c160;font-size: 26px"> 家庭助手 </text>
       <!-- <text class="subtitle" bindtap="toAssistant"> 更多 </text> -->
     </view>

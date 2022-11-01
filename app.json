@@ -53,16 +53,7 @@
     "mp-icon": "weui-miniprogram/icon/icon",
     "mp-search-bar": "weui-miniprogram/searchbar/searchbar",
     "mp-badge": "weui-miniprogram/badge/badge",
-    "mp-dialog": "weui-miniprogram/dialog/dialog",
-    "van-button": "@vant/weapp/button/index",
-    "van-field": "@vant/weapp/field/index",
-    "van-cell": "@vant/weapp/cell/index",
-    "van-cell-group": "@vant/weapp/cell-group/index",
-    "van-radio": "@vant/weapp/radio/index",
-    "van-radio-group": "@vant/weapp/radio-group/index",
-    "van-checkbox": "@vant/weapp/checkbox/index",
-    "van-icon": "@vant/weapp/icon/index",
-    "van-image": "@vant/weapp/image/index"
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
   },
   "useExtendedLib": {
     "kbone": true,
@@ -75,15 +66,15 @@
   },
   "plugins": {
     "chooseLocation": {
-      "version": "1.0.5",
+      "version": "1.0.9",
       "provider": "wx76a9a06e5b4e693e"
     },
     "routePlan": {
-      "version": "1.0.12",
+      "version": "1.0.19",
       "provider": "wx50b5593e81dd937a"
     },
     "subway": {
-      "version": "1.0.10",
+      "version": "1.0.13",
       "provider": "wx6aaf93c4435fa1c1"
     }
   },
